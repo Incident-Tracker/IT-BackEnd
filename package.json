@@ -1,0 +1,23 @@
+{
+  "name": "it-backend",
+  "version": "0.0.1",
+  "description": "인시던트 트래커 백엔드",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Incident-Tracker/IT-BackEnd.git"
+  },
+  "author": "hodugwaja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Incident-Tracker/IT-BackEnd/issues"
+  },
+  "homepage": "https://github.com/Incident-Tracker/IT-BackEnd#readme",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
