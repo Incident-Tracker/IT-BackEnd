@@ -4,11 +4,13 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
+const { sequelize } = require('./models');
 require('dotenv').config();
 
 const pageRouter = require('./routes/page');
 
 const app = express();
+sequelize.sync();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -47,4 +49,4 @@ app.use((err, req, res) => {
 
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기중');
-});
+});``
