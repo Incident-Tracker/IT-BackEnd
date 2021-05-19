@@ -4,13 +4,19 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const flash = require('connect-flash');
-const { sequelize } = require('./models');
+const passport = require('passport');
+
 require('dotenv').config();
-
+const { sequelize } = require('./models');
 const pageRouter = require('./routes/page');
-
+const passportConfig = require('./passport');
 const app = express();
+
+
 sequelize.sync();
+passportConfig(passport);
+
+
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
